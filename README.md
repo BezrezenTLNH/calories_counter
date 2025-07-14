@@ -28,6 +28,29 @@ To allow the user to:
 - GitHub Actions (CI)
 - Prometheus + Grafana (monitoring)
 
+## 🔍 Code Style and Linting
+
+We use the following tools to maintain consistent code style and quality:
+
+| | Tool | Purpose |00 |----------------|----------------------------------|
+| **ruff** | Linting (replacing flake8 + pylint) |
+| **black** | Autoformatting code |
+| **isort** | Arranging imports |
+| **mypy** | Type checking |
+| **pre-commit** | Autorun linting on commit |
+
+### 🛠️ Manual installation and startup:
+
+```bash
+# Install dependencies
+poetry install
+
+# Check linters manually
+poetry run ruff check .
+poetry run black --check .
+poetry run isort --check-only .
+poetry run mypy app
+
 ## 🚀 Quick Start (in development)
 
 > ⚠️ Attention: the project is at an early stage and actively developing.

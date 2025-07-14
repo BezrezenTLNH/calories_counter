@@ -1,0 +1,28 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace       # Removes trailing spaces at the end of lines
+      - id: end-of-file-fixer         # Ensures there is a single empty line at the end of the file
+      - id: check-yaml                # Checks YAML files for syntax correctness
+      - id: check-added-large-files   # Warns about adding very large files
+
+  - repo: https://github.com/psf/black
+    rev: 25.1.0
+    hooks:
+      - id: black                    # Formats Python code according to Black standards
+
+  - repo: https://github.com/PyCQA/isort
+    rev: 6.0.1
+    hooks:
+      - id: isort                    # Sorts imports in Python files
+
+  - repo: https://github.com/PyCQA/flake8
+    rev: 7.3.0
+    hooks:
+      - id: flake8                   # Static analysis of Python code
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.16.1
+    hooks:
+      - id: mypy                     # Checks types in Python code (if you use type hints)
